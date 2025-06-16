@@ -1,2 +1,4 @@
-# nodejs-ec2-deployment
-deployment of nodejs server on aws ec2 instance
+# nodejs-server
+1- nodejs server for docker learning
+2- writing dockerfile
+3- docker-compose-file
