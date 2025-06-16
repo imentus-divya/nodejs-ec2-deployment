@@ -1,0 +1,25 @@
+version : '3.8'
+services :
+  nodeapp2:
+    build: .
+    ports:
+      - 5555:5555
+    volumes:
+      - .:/app
+    environment:
+      - PORT=5555
+      - PGHOST=postgres
+      - PGUSER=user
+      - PGPASSWORD=password
+      - PGDATABASE=db
+      - PGPORT=5432
+    depends_on:
+      - postgres
+  postgres :
+    image: postgres # will come from docker-hub
+    ports :
+      - "5432:5432"
+    environment :
+      POSTGRES_USER: user
+      POSTGRES_DB: db
+      POSTGRES_PASSWORD: password
